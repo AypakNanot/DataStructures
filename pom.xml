@@ -14,6 +14,7 @@
         <module>sparse-array</module>
         <!-- 单向队列 -->
         <module>unidirectional-queue</module>
-
+        <!-- 环形队列 -->
+        <module>circle-queue</module>
     </modules>
 </project>

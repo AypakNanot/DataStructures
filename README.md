@@ -12,3 +12,6 @@
 
 单向队列为一次性使用，不能重复。重复使用请看下面的`环形队列`
 
+- [环形队列](circle-queue/src/main/resources/circle-queue.md)
+
+数组实现环形队列。
