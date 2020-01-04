@@ -5,12 +5,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.aypak</groupId>
-    <artifactId>data-structures</artifactId>
+    <artifactId>sparse-array</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <packaging>pom</packaging>
 
-    <modules>
-        <!-- 稀疏数组 -->
-        <module>sparse-array</module>
-    </modules>
+
 </project>
