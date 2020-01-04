@@ -12,5 +12,8 @@
     <modules>
         <!-- 稀疏数组 -->
         <module>sparse-array</module>
+        <!-- 单向队列 -->
+        <module>unidirectional-queue</module>
+
     </modules>
 </project>
