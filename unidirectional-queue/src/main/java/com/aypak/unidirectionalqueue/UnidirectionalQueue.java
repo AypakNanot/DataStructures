@@ -13,11 +13,11 @@ public class UnidirectionalQueue {
     /**
      * 起始位置，默认为-1，标记为没有元素被取
      */
-    private int rear = -1;
+    private int front = -1;
     /**
      * 结束位置，默认为-1，标记为没有元素添加进来
      */
-    private int front = -1;
+    private int rear = -1;
 
     /**
      * 队列最大存储数据量
@@ -38,7 +38,7 @@ public class UnidirectionalQueue {
      * @return true：满，false：未满
      */
     public boolean isFull(){
-        return capacity <= front;
+        return capacity <= rear;
     }
 
     /**
@@ -46,7 +46,7 @@ public class UnidirectionalQueue {
      * @return true：空，false：有数据
      */
     public boolean isEmpty(){
-        return front == rear;
+        return rear == front;
     }
 
     /**
@@ -60,7 +60,7 @@ public class UnidirectionalQueue {
             return;
         }
         //先把索引往后移动再添加
-        queue[++front] = v;
+        queue[++rear] = v;
     }
 
     /**
@@ -74,13 +74,13 @@ public class UnidirectionalQueue {
             return null;
         }
         //先把索引往后移动再取数据
-        return queue[++rear];
+        return queue[++front];
     }
 
     @Override
     public String toString(){
         StringBuilder sb = new StringBuilder();
-        for (int i=rear+1;i <= front; i++){
+        for (int i = front +1; i <= rear; i++){
             sb.append(String.format("%d\n",queue[i]));
         }
         return sb.toString();
