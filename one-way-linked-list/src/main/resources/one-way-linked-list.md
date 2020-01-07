@@ -17,35 +17,38 @@ Last元素，始终指向最后一个元素，初始化的时候指向head。Las
 
 - 添加数据
 
-    
-    Node temp = new Node(x);
-    //先把新加的元素添加到最后next中
-    last.next = temp;
-    //再把最后一个元素指向添加后的最后一个元素
-    last = temp;
-    //有效元素length添加+1
-    count.getAndIncrement();
-   
+```    
+Node temp = new Node(x);
+//先把新加的元素添加到最后next中
+last.next = temp;
+//再把最后一个元素指向添加后的最后一个元素
+last = temp;
+//有效元素length添加+1
+count.getAndIncrement();
+```
+
 - 删除数据
 
+```
+//trail 为p的上一节点元素，断开连接的时候需要此节点的引用，p为需要判断是否是删除的元素
+for (Node<E> trail = head, p = trail.next; p != null; trail = p, p = p.next) {
+    if (o.equals(p.data)) {
+        unlink(p, trail);
+        count.getAndDecrement();
+        return true;
+    }
+}
 
-    //trail 为p的上一节点元素，断开连接的时候需要此节点的引用，p为需要判断是否是删除的元素
-    for (Node<E> trail = head, p = trail.next; p != null; trail = p, p = p.next) {
-        if (o.equals(p.data)) {
-            unlink(p, trail);
-            count.getAndDecrement();
-            return true;
-        }
+/**
+ * 将内部节点p与上一节点断开连接
+ */
+void unlink(Node<E> p, Node<E> trail) {
+    p.data = null;
+    trail.next = p.next;
+    //如果最后一个元素被删除，则last需要指向上一节点数据
+    if (last == p) {
+        last = trail;
     }
+}
     
-    /**
-     * 将内部节点p与上一节点断开连接
-     */
-    void unlink(Node<E> p, Node<E> trail) {
-        p.data = null;
-        trail.next = p.next;
-        //如果最后一个元素被删除，则last需要指向上一节点数据
-        if (last == p) {
-            last = trail;
-        }
-    }
+ ```
