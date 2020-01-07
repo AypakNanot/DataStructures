@@ -16,5 +16,7 @@
         <module>unidirectional-queue</module>
         <!-- 环形队列 -->
         <module>circle-queue</module>
+        <!-- 单向链表 -->
+        <module>one-way-linked-list</module>
     </modules>
 </project>
