@@ -18,5 +18,7 @@
         <module>circle-queue</module>
         <!-- 单向链表 -->
         <module>one-way-linked-list</module>
+        <!-- 双向链表 -->
+        <module>double-linked-list</module>
     </modules>
 </project>

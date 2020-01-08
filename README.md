@@ -17,3 +17,6 @@
 - [单向链表](one-way-linked-list/src/main/resources/one-way-linked-list.md)
 
 实现添加，获取，反转，删除等操作
+
+- [双向链表](double-linked-list/src/main/resources/double-linkedlist.md)
+
