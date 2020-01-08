@@ -86,7 +86,6 @@ public void reverseNode() {
         cur = next;
     }
     head.next = rHead.next;
-    return;
 }
 
 ```
