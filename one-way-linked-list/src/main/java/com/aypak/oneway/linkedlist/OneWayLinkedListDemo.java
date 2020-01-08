@@ -9,14 +9,19 @@ public class OneWayLinkedListDemo {
     public static void main(String[] args) {
 
         OneWayLinkedList<String> list = new OneWayLinkedList<>(5);
-        list.add("你好");
-        list.add("真好");
-        list.add("1");
-        list.add("2");
-        list.add("3");
-        list.remove("2");
+        list.add("A");
+        list.add("B");
+        list.add("C");
+        list.add("D");
+        list.add("E");
+        list.remove("D");
         System.out.println("正序打印");
         list.print();
+
+        System.out.println("链表进行反转");
+        list.reverseNode();
+        System.out.println("链表反转完成");
+
         System.out.println("利用栈特效先进后出反向打印数据");
         list.reversePrint();
         //获取链表有效数据长度

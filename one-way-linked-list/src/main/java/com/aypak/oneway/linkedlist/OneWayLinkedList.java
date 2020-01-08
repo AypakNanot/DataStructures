@@ -201,6 +201,39 @@ public class OneWayLinkedList<E> {
     }
 
     /**
+     * 手写反转链表
+     * - Head->A->B->C-D   ===>>  Head->D->C->B->A
+     * - 取出Head的第一个有效元素 cur = head.next
+     * - 如果cur不是空元素，则把当前元素的后一个元素所有都给保存起来，next = cur.next
+     * - 将当前节点插入到rHead链表中的第一个节点位置， cur.next = rHead.next ; rHead.next = cur;
+     * - 让下一次遍历的时候，是取next进行遍历，因为next是当前节点的后一个节点，当前节点已经插入到了rHead中。
+     */
+    public void reverseNode() {
+        if (length() <= 1) {
+            return;
+        }
+        //创建一个新队列头
+        Node<E> rHead = new Node<>(null);
+        //获取第一个数据
+        Node<E> cur = head.next;
+        //定义一个值来临时保存cur的下一个节点指向
+        Node<E> next;
+        while (cur != null) {
+            //先暂时保存当前节点的下一个节点，因为后面需要使用
+            next = cur.next;
+            //下面两步是把节点插入到read的第一个H节点位置
+            //将cur的下一个节点指向新的链表的最前端
+            cur.next = rHead.next;
+            //将cur 连接到新的链表上
+            rHead.next = cur;
+            //让cur后移
+            cur = next;
+        }
+        head.next = rHead.next;
+        return ;
+    }
+
+    /**
      * 利用栈进行反向打印
      */
     public void reversePrint() {

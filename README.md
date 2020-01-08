@@ -1,6 +1,4 @@
-# DataStructures
-
-## 数据结构
+# 数据结构 DataStructures
 
 
 - [稀疏数组](sparse-array/src/main/resources/SparseArray.md)
@@ -17,3 +15,5 @@
 数组实现环形队列。
 
 - [单向链表](one-way-linked-list/src/main/resources/one-way-linked-list.md)
+
+实现添加，获取，反转，删除等操作
