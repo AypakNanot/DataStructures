@@ -230,7 +230,6 @@ public class OneWayLinkedList<E> {
             cur = next;
         }
         head.next = rHead.next;
-        return ;
     }
 
     /**
