@@ -20,5 +20,7 @@
         <module>one-way-linked-list</module>
         <!-- 双向链表 -->
         <module>double-linked-list</module>
+        <!-- 环形单向链表 -->
+        <module>circle-single-linked-list</module>
     </modules>
 </project>

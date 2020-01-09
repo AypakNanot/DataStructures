@@ -20,3 +20,7 @@
 
 - [双向链表](double-linked-list/src/main/resources/double-linkedlist.md)
 
+
+- [单向环形链表](circle-single-linked-list/src/main/resources/circle-single-linkedList.md)
+
+著名的Josephus问题
