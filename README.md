@@ -24,3 +24,8 @@
 - [单向环形链表](circle-single-linked-list/src/main/resources/circle-single-linkedList.md)
 
 著名的Josephus问题
+
+
+- [随机取值](random-access/src/main/resources/random-access.md)
+
+如何取100以内不重复的100个随机数？

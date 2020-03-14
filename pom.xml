@@ -22,5 +22,7 @@
         <module>double-linked-list</module>
         <!-- 环形单向链表 -->
         <module>circle-single-linked-list</module>
+        <!-- 随机取数 -->
+        <module>random-access</module>
     </modules>
 </project>
