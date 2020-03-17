@@ -32,7 +32,7 @@ public class RandomAccess {
     /**
      * 获取min到max之前的随机数
      * @param min 最小数
-     * @param max 最大数
+     * @param max 最大数,注意这里的max是不包含的，因为是下标所有要少1. the bound (exclusive) of each random value
      * @return 随机数
      */
     public static int getRandomBetween(int min,int max){
